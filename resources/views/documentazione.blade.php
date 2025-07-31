@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="https://kit.fontawesome.com/d750cfe593.js" crossorigin="anonymous"></script>
 
 
@@ -19,7 +19,7 @@
 
 <body>
     <x-page-title>
-        <h1 class="text-center text-4xl font-bold">Documentazione</h1>
+        <h1 class="text-center text-4xl text-ics-primary-100 font-bold">Documentazione</h1>
     </x-page-title>
 
     <div>
@@ -84,7 +84,7 @@
                             </div>
                             <div class="flex flex-rows justify-between">
                                 <p class="font-light">hex: <span class="copy-color">{{ $colore['hex'] }}</span></p>
-                                <button onclick="copyColor(this)" class="text-xs rounded-lg bg-ics-primary-100 w-10 h-5 text-white mt-1"><i class="fa-solid fa-copy"></i></button>
+                                <button onclick="copyColor(this)" class="text-xs rounded-lg bg-ics-primary-100 w-10 h-5 text-white mt-1 "><i class="fa-solid fa-copy"></i></button>
                             </div>
                         </div>
 
@@ -117,7 +117,7 @@
             </div>
             <x-section class="flex felx-cols w-full bg-ics-primary-200 text-white">
                 <code class="select-none">
-        &lt;button &#123;&#123; $attributes->merge&#40;&#91;'type' => $attributes->get&#40;'type', 'button'&#41;, 'class' => 'w-32 h-10 rounded-lg'&#93;&#41; &#125;&#125;&gt;<br>
+        &lt;button &#123;&#123; $attributes->merge&#40;&#91;'type' => $attributes->get&#40;'type', 'button'&#41;, 'class' => 'btn'&#93;&#41; &#125;&#125;&gt;<br>
             &#123;&#123; $slot &#125;&#125;<br>
         &lt;/button&gt;
                 </code>
@@ -342,9 +342,18 @@
     </div>
 
     <div>
+        <div class="w-full h-20 flex justify-center items-center">
+            <h2 class="text-2xl">Modale</h2>
+        </div>
         <x-section class="mx-10 flex justify-center items-center">
-            <x-button class="bg-ics-primary-100 text-white">Apri modale</x-button>
-            <x-modale></x-modale>
+            <x-button onclick="window.dispatchEvent(new CustomEvent('open-modal', { detail: { id: 'myModal' } }))" class="bg-ics-primary-100 text-white">Apri modale</x-button>
+            <x-modale id="myModal" title="Modale" subtitle="Modale di prova"> 
+                <p>Sei sicuro di voler eliminare questo elemento?</p>
+                <x-slot name="footer">
+                    <x-button @click="$dispatch('open-modal', { id: 'myModal' })" class="btn-secondary-200">Annulla</x-button>
+                    <x-button class="btn-danger">Elimina</x-button>
+                </x-slot>
+            </x-modale>
         </x-section>
     </div>
 
