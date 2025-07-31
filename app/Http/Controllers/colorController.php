@@ -59,20 +59,14 @@ class colorController extends Controller
         [
             'items' => [
                 [
-                    'name' => 'ics-gray-200',
+                    'name' => 'ics-gray-100',
                     'RGB' => '241-242-248',
                     'hex' => '#F1F2F8'
                 ],
                 [
-                    'name' => 'ics-gray-300',
+                    'name' => 'ics-gray-200',
                     'RGB' => '220-222-231',
                     'hex' => '#DCDEE7'
-                ],
-                [
-                    'name' => 'ics-gray-100',
-                    'RGB' => '255-255-255',
-                    'hex' => '#FFFFFF',
-                    'border' => true
                 ],
             ],
         ],

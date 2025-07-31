@@ -20,7 +20,7 @@
             class="sr-only peer"
             {{ $attributes }}
         >
-        <div class="w-11 h-6 bg-ics-gray-300 rounded-full peer-checked:bg-ics-primary-100 transition-colors duration-300"></div>
+        <div class="w-11 h-6 bg-ics-gray-200 rounded-full peer-checked:bg-ics-primary-100 transition-colors duration-300"></div>
         <div class="absolute top-0.5 left-0.5 bg-white w-5 h-5 rounded-full shadow-md transform peer-checked:translate-x-5 transition-transform duration-300"></div>
     </div>
 

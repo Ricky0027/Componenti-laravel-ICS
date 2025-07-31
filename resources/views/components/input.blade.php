@@ -28,7 +28,7 @@
             type="file"
             id="{{ $inputId }}"
             name="{{ $name }}"
-            class="file:px-4 file:p-2 file:border w-1/2 border border-ics-gray-300 bg-ics-gray-100 file:bg-ics-primary-100 file:text-ics-gray-100"
+            class="file:px-4 file:p-2 file:border w-1/2 border border-ics-gray-300 bg-white file:bg-ics-primary-100 file:text-white"
             placeholder="{{ $placeholder }}"
             value="{{ old($name, $value) }}"
         />

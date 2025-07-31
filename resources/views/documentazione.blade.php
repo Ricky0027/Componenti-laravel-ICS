@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://kit.fontawesome.com/d750cfe593.js" crossorigin="anonymous"></script>
 
 
@@ -80,11 +80,11 @@
                             <p class="font-bold">{{ $colore['name'] }}</p>
                             <div class="flex flex-rows justify-between">
                                 <p class="font-light">RGB: <span class="copy-color">{{ $colore['RGB'] }}</span></p>
-                                <button onclick="copyColor(this)" class="text-xs rounded-lg bg-ics-primary-100 w-10 h-5 text-ics-gray-100"><i class="fa-solid fa-copy"></i></button>
+                                <button onclick="copyColor(this)" class="text-xs rounded-lg bg-ics-primary-100 w-10 h-5 text-white"><i class="fa-solid fa-copy"></i></button>
                             </div>
                             <div class="flex flex-rows justify-between">
                                 <p class="font-light">hex: <span class="copy-color">{{ $colore['hex'] }}</span></p>
-                                <button onclick="copyColor(this)" class="text-xs rounded-lg bg-ics-primary-100 w-10 h-5 text-ics-gray-100 mt-1"><i class="fa-solid fa-copy"></i></button>
+                                <button onclick="copyColor(this)" class="text-xs rounded-lg bg-ics-primary-100 w-10 h-5 text-white mt-1"><i class="fa-solid fa-copy"></i></button>
                             </div>
                         </div>
 
@@ -115,7 +115,7 @@
             <div class="w-3 h-3">
                 <h2 class="font-bold mb-5 underline">Component</h2>
             </div>
-            <x-section class="flex felx-cols w-full bg-ics-primary-200 text-ics-gray-100">
+            <x-section class="flex felx-cols w-full bg-ics-primary-200 text-white">
                 <code class="select-none">
         &lt;button &#123;&#123; $attributes->merge&#40;&#91;'type' => $attributes->get&#40;'type', 'button'&#41;, 'class' => 'w-32 h-10 rounded-lg'&#93;&#41; &#125;&#125;&gt;<br>
             &#123;&#123; $slot &#125;&#125;<br>
@@ -134,7 +134,7 @@
             <div class="w-10">
                 <h2 class="font-bold underline">Code</h2>
             </div>
-            <x-section class="flex flex-cols bg-ics-primary-200 text-ics-gray-100">
+            <x-section class="flex flex-cols bg-ics-primary-200 text-white">
                 <code class="copy-text">
         &lt;x-button type="button" class="btn-primary-100"&gt;
         Visualizza
@@ -169,7 +169,7 @@
                 <h2 class="font-bold underline">Code</h2>
             </div>
 
-            <x-section class="flex flex-cols bg-ics-primary-200 text-ics-gray-100">
+            <x-section class="flex flex-cols bg-ics-primary-200 text-white">
                 <code class="copy-text">
         &lt;x-button type="button" class="btn-out btn-out-primary""&gt;
         Visualizza
@@ -202,7 +202,7 @@
                 <h2 class="font-bold underline">Code</h2>
             </div>
 
-            <x-section class="flex flex-cols bg-ics-primary-200 text-ics-gray-100">
+            <x-section class="flex flex-cols bg-ics-primary-200 text-white">
                 <code class="copy-text">
         &lt;x-button type="button" class="btn-danger""&gt;&lt;i class="fa-doutone fa-solid fa-trash mr-3"&gt;&lt;/i&gt;
         Visualizza
@@ -224,7 +224,7 @@
             <div class="w-40 h-3 mb-5">
                 <h2 class="font-bold underline">Component Form</h2>
             </div>
-            <x-section class="flex bg-ics-primary-200 text-ics-gray-100">
+            <x-section class="flex bg-ics-primary-200 text-white">
                 <code class="select-none">
             &#64;props&#40;&#91;'id', 'action', 'method', 'enctype' => ''&#93;&#41;<br>
             &lt;form action="&#123;&#123; $action &#125;&#125;" method="&#123;&#123; $method === 'GET' ? 'GET' : 'POST' &#125;&#125;" &#123;&#123; $attributes->merge&#40;&#91;'class' => 'flex flex-col gap-8'&#93;&#41; &#125;&#125;&gt;<br>
@@ -234,7 +234,7 @@
                 &#64;endif <br><br>
                 &#123;&#123; $slot &#125;&#125;<br><br>
                 &lt;div class="pt-5"&gt;<br>
-                        &lt;button type="submit" class="bg-ics-primary-100 rounded-lg text-ics-gray-100 w-20 h-10"&gt;Salva&lt;/button&gt;<br>
+                        &lt;button type="submit" class="bg-ics-primary-100 rounded-lg text-white w-20 h-10"&gt;Salva&lt;/button&gt;<br>
                 &lt;/div&gt;<br>
             &lt;/form&gt;
             
@@ -246,7 +246,7 @@
             <div class="w-40 h-3 mb-5">
                 <h2 class="font-bold underline">Component Input</h2>
             </div>
-            <x-section class="flex bg-ics-primary-200 text-ics-gray-200">
+            <x-section class="flex bg-ics-primary-200 text-ics-gray-100">
                 <code class="select-none">
                 &#64;props&#40;&#91;<br>
                     'label' => '', <br>
@@ -275,7 +275,7 @@
                             type="file"<br>
                             id="&#123;&#123; $inputId &#125;&#125;"<br>
                             name="&#123;&#123; $name &#125;&#125;"<br>
-                            class="file:px-4 file:p-2 file:border w-1/2 border border-ics-gray-300 bg-ics-gray-100 file:bg-ics-primary-100 file:text-ics-gray-100"<br>
+                            class="file:px-4 file:p-2 file:border w-1/2 border border-ics-gray-200 bg-white file:bg-ics-primary-100 file:text-white"<br>
                             placeholder="&#123;&#123; $placeholder &#125;&#125;"<br>
                             value="&#123;&#123; old&#40;$name, $value&#41; &#125;&#125;"<br>
                     /&gt;<br>
@@ -318,7 +318,7 @@
             <div class="w-3 h-3">
                 <h2 class="font-bold underline">Code</h2>
             </div>
-            <x-section class="flex w-full bg-ics-primary-200 text-ics-gray-100">
+            <x-section class="flex w-full bg-ics-primary-200 text-white">
                 <code class="copy-text">
                 &lt;x-form action="" method="GET"&gt;<br>
                 &lt;x-input label="Text" name="text" type="text" placeholder="Inserisci testo"/&gt;<br>
@@ -341,6 +341,14 @@
         </x-section>
     </div>
 
+    <div>
+        <x-section class="mx-10 flex justify-center items-center">
+            <x-button class="bg-ics-primary-100 text-white">Apri modale</x-button>
+            <x-modale></x-modale>
+        </x-section>
+    </div>
+
+
 
     <script>
         tailwind.config = {
@@ -360,9 +368,8 @@
                             warning: "#F7AD19",
                             danger: "#BF1613",
                             gray: {
-                                100: "#FFFFFF",
-                                200: "#F1F2F8",
-                                300: "#DCDEE7",
+                                100: "#F1F2F8",
+                                200: "#DCDEE7",
                             }
                         }
                     }
@@ -376,19 +383,19 @@
                 @apply w-32 h-10 rounded-lg;
             }
             .btn-primary-100 {
-                @apply bg-ics-primary-100 text-ics-gray-100;
+                @apply bg-ics-primary-100 text-white;
             }
             .btn-secondary-200 {
                 @apply bg-ics-secondary-200 text-ics-primary-100;
             }
             .btn-success {
-                @apply bg-ics-success text-ics-gray-100;
+                @apply bg-ics-success text-white;
             }
             .btn-warning {
-                @apply bg-ics-warning text-ics-gray-100;
+                @apply bg-ics-warning text-white;
             }
             .btn-danger {
-                @apply bg-ics-danger text-ics-gray-100;
+                @apply bg-ics-danger text-white;
             }
             .btn-out {
                 @apply border border-2;
@@ -439,7 +446,7 @@
             });
         }
     </script>
-
+    
 
 </body>
 

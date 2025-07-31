@@ -37,7 +37,7 @@
         />
 
         @if ($addon && $addonPosition === 'right')
-            <span class="inline-flex items-center px-3 bg-ics-gray-100 text-ics-primary-100 text-sm border border-l-0 border-ics-gray-300">
+            <span class="inline-flex items-center px-3 bg-white text-ics-primary-100 text-sm border border-l-0 border-ics-gray-300">
                 {!! $addon !!}
             </span>
         @endif

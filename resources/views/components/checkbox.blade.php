@@ -22,7 +22,7 @@
         {{ $attributes }}
     />
 
-    <label for="{{ $checkboxId }}" class="w-12 h-12 rounded-md bg-ics-gray-300 flex items-center justify-center peer-checked:bg-ics-gray-300 cursor-pointer transition-colors">
+    <label for="{{ $checkboxId }}" class="w-12 h-12 rounded-md bg-ics-gray-200 flex items-center justify-center peer-checked:bg-ics-gray-200 cursor-pointer transition-colors">
         @if ($isChecked)
             <i class="fa-solid fa-check text-4xl text-ics-primary-100"></i>    
         @endif

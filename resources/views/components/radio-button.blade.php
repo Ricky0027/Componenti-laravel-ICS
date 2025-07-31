@@ -22,7 +22,7 @@
         {{ $attributes }}
     />
     
-    <label for="{{ $radioId }}" class="w-10 h-10 rounded-full bg-ics-gray-300 flex items-center justify-center cursor-pointer transition">
+    <label for="{{ $radioId }}" class="w-10 h-10 rounded-full bg-ics-gray-200 flex items-center justify-center cursor-pointer transition">
         @if ($isChecked)
             <i class="fa-solid fa-circle text-4xl text-ics-primary-100"></i>
         @endif

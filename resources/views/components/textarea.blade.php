@@ -4,6 +4,7 @@
     'id' => null,
     'rows' => '4',
     'value'  => '',
+    'placeholder' => '',
 ])
 
 @php
@@ -20,6 +21,7 @@
     <textarea 
         name="{{ $name }}"
         id="{{ $textareaId }}"
+        placeholder="{{ $placeholder }}"
         rows="{{ $rows }}"
         {{ $attributes->merge(['class' => 'w-1/2 border border-ics-gray-200 rounded p-2 focus:ring-ics-primary-100 focus:border-ics-primary-100']) }}>
         {{ old($name, $value) }}

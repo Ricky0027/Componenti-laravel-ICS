@@ -25,6 +25,6 @@
     {{ $slot }}
     
     <div class="pt-5">
-        <button type="submit" class="bg-ics-primary-100 rounded-lg text-ics-gray-100 w-20 h-10">Salva</button>
+        <button type="submit" class="bg-ics-primary-100 rounded-lg text-white w-20 h-10">Salva</button>
     </div>
 </form>
