@@ -11,21 +11,21 @@
     x-cloak
     id="{{ $id }}"
     @open-modal.window="if ($event.detail.id === '{{ $id }}') open = true"
-    class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
->
-    <div 
-        @click.away="open = false"
-        class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative"
-    >
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+    <div @click.away="open = false" class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative">
         {{-- Header --}}
-        <div class="flex justify-between items-center border-b pb-2 mb-4">
-            <h2 class="text-xl font-semibold">{{ $title }}</h2>
-            <h3 class="text-sm font-medium">{{ $subtitle }}</h3>
-            <button @click="open = false" class="text-ics-primary-100 hover:text-ics-danger text-xl">&times;</button>
+        <div class="pb-2 mb-4">
+            <div class="flex justify-between items-start">
+                <div>
+                    <h2 class="text-xl font-bold text-ics-primary-100">{{ $title }}</h2>
+                    <h3 class="text-sm font-medium text-ics-primary-100 mt-1">{{ $subtitle }}</h3>
+                </div>
+                <button @click="open = false" class="text-ics-primary-100 hover:text-ics-danger text-xl">&times;</button>
+            </div>
         </div>
 
         {{-- Body --}}
-        <div class="mb-4">
+        <div class="mb-4 font-regular text-ics-primary-100">
             {{ $slot }}
         </div>
 
