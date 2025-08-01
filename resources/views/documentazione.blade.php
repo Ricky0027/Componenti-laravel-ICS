@@ -145,9 +145,7 @@
 &lt;x-button type="button" class="btn-danger"&gt;Visualizza&lt;/x-button&gt;
                 </pre>
             </x-section>
-            <div class="flex justify-end">
-                <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>
-            </div>        
+            <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>        
         </x-section>
 
         <div class="w-full h-20 flex justify-center items-center">
@@ -171,9 +169,7 @@
 &lt;x-button type="button" class="btn-out btn-out-danger"&gt;Visualizza&lt;/x-button&gt;
                 </pre>
             </x-section>
-            <div class="flex justify-end">
-                <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>
-            </div>        
+            <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>       
         </x-section>
 
         <div class="w-full h-20 flex justify-center items-center">
@@ -196,9 +192,7 @@
 &lt;x-button type="button" class="btn-out btn-out-danger"&gt;&lt;i class="fa-doutone fa-solid fa-trash mr-3"&gt;&lt;/i&gt;Visualizza&lt;/x-button&gt;
                 </pre>
             </x-section>
-            <div class="flex justify-end">
-                <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>
-            </div>        
+            <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>        
         </x-section>
     </div>
 
@@ -323,9 +317,7 @@
 &lt;/x-form&gt;
                 </pre>
             </x-section>
-            <div class="flex justify-end">
-                <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>
-            </div>
+            <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>
         </x-section>
     </div>
 
@@ -411,9 +403,7 @@
 &lt;/x-modale&gt;
                 </pre>
             </x-section>
-            <div class="flex justify-end">
-                <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>
-            </div>
+            <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>
         </x-section>
     </div>
 
@@ -446,7 +436,7 @@
         &lt;/thead&gt;
         &lt;tbody class="text-sm font-regular text-ics-primary-100"&gt;
             &#123;&#123; $slot &#125;&#125;
-        &lt;tbody&gt;
+        &lt;/tbody&gt;
 &lt;/table&gt;
                 </pre>
             </x-section>
@@ -475,7 +465,7 @@
 
             <x-section class="flex bg-ics-primary-200 text-white">
                 <pre class="copy-text">
-&lt;x-table :headers="&#91;'Nome', 'Email', 'Ruolo&#93;" class="text-ics-primary-100 font-semibold"&gt;
+&lt;x-table :headers="&#91;'Nome', 'Email', 'Ruolo'&#93;" class="text-ics-primary-100 font-semibold"&gt;
 &lt;tr&gt;
     &lt;td class="px-4 py-2 border-b border-r border-ics-primary-100"&gt;Mario Rossi&lt;/td&gt;
     &lt;td class="px-4 py-2 border-b border-r border-ics-primary-100"&gt;mario@example.com&lt;/td&gt;
@@ -489,12 +479,11 @@
 &lt;/x-table&gt;
                 </pre>
             </x-section>
-            <div class="flex justify-end">
-                <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>
-            </div>
+            <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>
         </x-section>
     </div>
 
+                
 
     <script>
         tailwind.config = {
