@@ -12,8 +12,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/alpinejs" defer></script>
-    {{-- <script src="https://kit.fontawesome.com/d750cfe593.js" crossorigin="anonymous"></script> --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/d750cfe593.js" crossorigin="anonymous"></script>
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
 
 
 
@@ -128,21 +128,21 @@
 
         <x-section class="grid-rows-5 mx-10 my-5">
             <h2 class="font-bold underline">Preview</h2>
-            <x-button type="button" class="btn-primary-100">Visualizza</x-button>
-            <x-button type="button" class="btn-secondary-200">Visualizza</x-button>
-            <x-button type="button" class="btn-success">Visualizza</x-button>
-            <x-button type="button" class="btn-warning">Visualizza</x-button>
-            <x-button type="button" class="btn-danger">Visualizza</x-button>
+            <x-button type="button" class="btn-primary-100 hover:btn-primary-200">Visualizza</x-button>
+            <x-button type="button" class="btn-secondary-200 hover:btn-secondary-300">Visualizza</x-button>
+            <x-button type="button" class="btn-success-100 hover:btn-success-200">Visualizza</x-button>
+            <x-button type="button" class="btn-warning-100 hover:btn-warning-200">Visualizza</x-button>
+            <x-button type="button" class="btn-danger-100 hover:btn-danger-200">Visualizza</x-button>
             <div class="w-10">
                 <h2 class="font-bold underline">Code</h2>
             </div>
             <x-section class="flex flex-cols bg-ics-primary-200 text-white">
                 <pre class="copy-text">
-&lt;x-button type="button" class="btn-primary-100"&gt;Visualizza&lt;/x-button&gt;
-&lt;x-button type="button" class="btn-secondary-200""&gt;Visualizza&lt;/x-button&gt;
-&lt;x-button type="button" class="btn-success"&gt;Visualizza&lt;/x-button&gt;
-&lt;x-button type="button" class="btn-warning"&gt;Visualizza&lt;/x-button&gt;
-&lt;x-button type="button" class="btn-danger"&gt;Visualizza&lt;/x-button&gt;
+&lt;x-button type="button" class="btn-primary-100 hover:btn-primary-200"&gt;Visualizza&lt;/x-button&gt;
+&lt;x-button type="button" class="btn-secondary-200 hover:btn-secondary-300"&gt;Visualizza&lt;/x-button&gt;
+&lt;x-button type="button" class="btn-success-100 hover:btn-success-200"&gt;Visualizza&lt;/x-button&gt;
+&lt;x-button type="button" class="btn-warning-100 hover:btn-warning-200"&gt;Visualizza&lt;/x-button&gt;
+&lt;x-button type="button" class="btn-danger-100 hover:btn-danger-200"&gt;Visualizza&lt;/x-button&gt;
                 </pre>
             </x-section>
             <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>        
@@ -153,20 +153,20 @@
         </div>
         <x-section class="grid-rows-4 mx-10 my-5">
             <h2 class="font-bold underline">Preview</h2>
-            <x-button type="button" class="btn-out btn-out-primary">Visualizza</x-button>
-            <x-button type="button" class="btn-out btn-out-success">Visualizza</x-button>
-            <x-button type="button" class="btn-out btn-out-warning">Visualizza</x-button>
-            <x-button type="button" class="btn-out btn-out-danger">Visualizza</x-button>
+            <x-button type="button" class="btn-out btn-out-primary hover:btn-primary-100">Visualizza</x-button>
+            <x-button type="button" class="btn-out btn-out-success hover:btn-success-100">Visualizza</x-button>
+            <x-button type="button" class="btn-out btn-out-warning hover:btn-warning-100">Visualizza</x-button>
+            <x-button type="button" class="btn-out btn-out-danger hover:btn-danger-100">Visualizza</x-button>
             <div class="w-3 h-3">
                 <h2 class="font-bold underline">Code</h2>
             </div>
 
             <x-section class="flex flex-cols bg-ics-primary-200 text-white">
                 <pre class="copy-text">
-&lt;x-button type="button" class="btn-out btn-out-primary""&gt;Visualizza&lt;/x-button&gt;
-&lt;x-button type="button" class="btn-out btn-out-success"&gt;Visualizza&lt;/x-button&gt;
-&lt;x-button type="button" class="btn-out btn-out-warning""&gt;Visualizza&lt;/x-button&gt;
-&lt;x-button type="button" class="btn-out btn-out-danger"&gt;Visualizza&lt;/x-button&gt;
+&lt;x-button type="button" class="btn-out btn-out-primary hover:btn-primary-100"&gt;Visualizza&lt;/x-button&gt;
+&lt;x-button type="button" class="btn-out btn-out-success hover:btn-success-100"&gt;Visualizza&lt;/x-button&gt;
+&lt;x-button type="button" class="btn-out btn-out-warning hover:btn-warning-100"&gt;Visualizza&lt;/x-button&gt;
+&lt;x-button type="button" class="btn-out btn-out-danger hover:btn-danger-100"&gt;Visualizza&lt;/x-button&gt;
                 </pre>
             </x-section>
             <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>       
@@ -178,18 +178,16 @@
 
         <x-section class="grid-rows-3 mx-10 my-5">
             <h2 class="font-bold underline">Preview</h2>
-            <x-button type="button" class="btn-danger"><i
-                    class="fa-duotone fa-solid fa-trash mr-3"></i>Visualizza</x-button>
-            <x-button type="button" class="btn-out btn-out-danger"><i
-                    class="fa-duotone fa-solid fa-trash mr-3"></i>Visualizza</x-button>
+            <x-button type="button" class="btn-danger-100 hover:btn-danger-200"><i class="fa-duotone fa-solid fa-trash mr-3"></i>Visualizza</x-button>
+            <x-button type="button" class="btn-out btn-out-danger hover:btn-danger-100"><i class="fa-duotone fa-solid fa-trash mr-3"></i>Visualizza</x-button>
             <div class="w-3 h-3">
                 <h2 class="font-bold underline">Code</h2>
             </div>
 
             <x-section class="flex flex-cols bg-ics-primary-200 text-white">
                 <pre class="copy-text">
-&lt;x-button type="button" class="btn-danger""&gt;&lt;i class="fa-doutone fa-solid fa-trash mr-3"&gt;&lt;/i&gt;Visualizza&lt;/x-button&gt;
-&lt;x-button type="button" class="btn-out btn-out-danger"&gt;&lt;i class="fa-doutone fa-solid fa-trash mr-3"&gt;&lt;/i&gt;Visualizza&lt;/x-button&gt;
+&lt;x-button type="button" class="btn-danger-100 hover:btn-danger-200"&gt;&lt;i class="fa-duotone fa-solid fa-trash mr-3"&gt;&lt;/i&gt;Visualizza&lt;/x-button&gt;
+&lt;x-button type="button" class="btn-out btn-out-danger hover:btn-danger-100"&gt;&lt;i class="fa-duotone fa-solid fa-trash mr-3"&gt;&lt;/i&gt;Visualizza&lt;/x-button&gt;
                 </pre>
             </x-section>
             <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>        
@@ -271,9 +269,9 @@
             /&gt;
     &#64;endif
     &#64;error&#40;$name&#41;
-            &lt;p class="text-sm text-ics-danger mt-1"&gt;&#123;&#123; $message &#125;&#125;&lt;/p&gt;
+            &lt;p class="text-sm text-ics-danger-100 mt-1"&gt;&#123;&#123; $message &#125;&#125;&lt;/p&gt;
     &#64;enderror
-&lt;/div&gt
+&lt;/div&gt;
                 </pre>
             </x-section>
         </x-section>
@@ -354,7 +352,7 @@
                     &lt;h2 class="text-xl font-bold text-ics-primary-100"&gt;&#123;&#123; $title &#125;&#125;&lt;/h2&gt;
                     &lt;h3 class="text-sm font-medium text-ics-primary-100 mt-1"&gt;&#123;&#123; $subtitle &#125;&#125;&lt;/h3&gt;
                 &lt;/div&gt;
-                &lt;button &#64;click="open = false" class="text-ics-primary-100 hover:text-ics-danger text-xl"&gt;&amp;times;&lt;/button&gt;
+                &lt;button &#64;click="open = false" class="text-md btn-out w-8 h-8 btn-out-primary rounded-full hover:btn-primary-100"&gt;&amp;times;&lt;/button&gt;
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -378,12 +376,12 @@
             <div class="w-full h-3">
                 <h2 class="font-bold underline">Preview</h2>
             </div>
-            <x-button onclick="window.dispatchEvent(new CustomEvent('open-modal', { detail: { id: 'myModal' } }))" class="bg-ics-primary-100 text-white">Apri modale</x-button>
+            <x-button onclick="window.dispatchEvent(new CustomEvent('open-modal', { detail: { id: 'myModal' } }))" class="bg-ics-primary-100 text-white hover:bg-ics-primary-200">Apri modale</x-button>
             <x-modale id="myModal" title="Servizio" subtitle="Prova modale"> 
                 <p>Contenuto Modale</p>
                 <x-slot name="footer">
-                    <x-button class="btn-primary-100">Salva</x-button>
-                    <x-button class="btn-secondary-200">Annulla</x-button>
+                    <x-button class="btn-primary-100 hover:btn-primary-200">Salva</x-button>
+                    <x-button class="btn-secondary-200 hover:btn-secondary-300">Annulla</x-button>
                 </x-slot>
             </x-modale>
 
@@ -392,8 +390,8 @@
             </div>
             <x-section class="flex bg-ics-primary-200 text-white my-5">
                 <pre class="copy-text">
-&lt;x-button onclick="window.dispatchEvent&#40;new CustomEvent&#40;'open-modal', &#123; detail: &#123; id: 'myModal' &#125; &#125;&#41;&#41;" class="bg-ics-primary-100 text-white"&gt;Apri modale
-&lt;/x-button&gt;
+&lt;x-button onclick="window.dispatchEvent&#40;new CustomEvent&#40;'open-modal', &#123; detail: &#123; id: 'myModal' &#125; &#125;&#41;&#41;" class="bg-ics-primary-100 text-white 
+hover:bg-ics-primary-200"&gt;Apri modale&lt;/x-button&gt;
 &lt;x-modale id="myModal" title="Servizio" subtitle="Prova modale"&gt;
     &lt;p&gt;Contenuto Modale&lt;/p&gt;
     &lt;x-slot name="footer"&gt;
@@ -483,8 +481,151 @@
         </x-section>
     </div>
 
-                
+    <div>
+        <div class="w-full h-20 flex justify-center items-center">
+            <h2 class="text-2xl">Tabs</h2>
+        </div>
 
+        <x-section class="mx-10 my-5">
+            <div class="w-40 h-3 mb-5">
+                <h2 class="font-bold underline">Component</h2>
+            </div>
+        
+            <x-section class="flex bg-ics-primary-200 text-white">
+                <pre class="select-none">
+&#64;props&#40;&#91;
+    'tabs' => &#91;&#93;,
+    'active' => '',
+&#93;&#41;
+
+&lt;div x-data="&#123; activeTab: '&#123;&#123; $active ?: array_values&#40;$tabs&#41;&#91;0&#93; &#125;&#125;' &#125;" class="w-full"&gt;
+    &lt;div class="flex space-x-4"&gt;
+        &#64;foreach &#40;$tabs as $label => $id&#41;
+            &lt;button
+                &#64;click="activeTab = '&#123;&#123; $id &#125;&#125;'"
+                class="px-20 py-2 border-t border-l border-r rounded-t-lg font-medium transition-all"
+                :class="activeTab" === '&#123;&#123; $id &#125;&#125;' 
+                    ? 'bg-white text-ics-primary-100'#121A30
+                    : 'bg-ics-secondary-200 text-ics-primary-100 hover:bg-ics-secondary-300'"&Gt;
+                &#123;&#123; $label &#125;&#125;
+            &lt;/button&gt;
+        &#64;endforeach
+    &lt;/div&gt;
+
+    &lt;div class="mt-4"&gt;
+        &#123;&#123; $slot &#125;&#125;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+
+            </x-section>
+        </x-section>
+
+
+        <x-section class="mx-10 my-5">
+            <div class="w-3 h-3">
+                <h2 class="font-bold underline">Preview</h2>
+            </div>
+            <x-tabs :tabs="['Tab 1' => 'tab1', 'Tab 2' => 'tab2', 'Tab 3' => 'tab3']" active="tab1">
+                <div x-show="activeTab === 'tab1'">
+                    Contenuto della prima tab.
+                </div>
+                <div x-show="activeTab === 'tab2'" x-cloak>
+                    Contenuto della seconda tab.
+                </div>
+                <div x-show="activeTab === 'tab3'" x-cloak>
+                    Contenuto della terza tab.
+                </div>
+            </x-tabs>
+
+            <div class="w-3 h-3">
+                <h2 class="font-bold underline">Code</h2>
+            </div>
+            <x-section class="flex bg-ics-primary-200 text-white">
+                <pre class="copy-text">
+&lt;x-tabs :tabs="&#91;'Tab 1' => 'tab1', 'Tab 2' => 'tab2', 'Tab 3' => 'tab3'&#93;" active="tab1"&gt;
+    &lt;div x-show="activeTab === 'tab1'"&gt;
+        Contenuto della prima tab.
+    &lt;/div&gt;
+    &lt;div x-show="activeTab === 'tab2'" x-cloak&gt;
+        Contenuto della seconda tab.
+    &lt;/div&gt;
+    &lt;div x-show="activeTab === 'tab3'" x-cloak&gt;
+        Contenuto della terza tab.
+    &lt;/div&gt;
+&lt;/x-tabs&gt;
+                </pre>  
+            </x-section>
+            <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>
+         </x-section>
+    </div>
+                
+    <div>
+        <div class="w-full h-20 flex justify-center items-center">
+            <h2 class="text-2xl">Badge</h2>
+        </div>
+        <x-section class="mx-10">
+            <div class="w-40 h-3 mb-5">
+                <h2 class="font-bold underline">Component</h2>
+            </div>
+            <x-section class="flex bg-ics-primary-200 text-white">
+                <pre class="select-none">
+&#64;props&#40;&#91;
+    'type' => '',
+    'rounded' => true,
+&#93;&#41;
+
+&#64;php
+    $base = 'inline-block text-md font-semibold px-2 py-1';
+    $colors = &#91;
+        'primary' => 'bg-ics-primary-100 text-white',
+        'secondary' => 'bg-ics-secondary-200 text-ics-primary-100',
+        'success' => 'bg-ics-success-100 text-white',
+        'warning' => 'bg-ics-warning-100 text-white',
+        'danger' => 'bg-ics-danger-100 text-white',
+    &#93;
+    $rounded = 'rounded';
+&#64;endphp
+
+&lt;span &#123;&#123; $attributes->merge&#40;&#91;'class' => "$base " . &#40;isset&#40;$colors&#91;$type&#93;&#41; ? $colors&#91;$type&#93; : $colors&#91;'primary'&#93;&#41; . " rounded"&#93;&#41; &#125;&#125;&gt;
+    &#123;&#123; $slot &#125;&#125;
+&lt;/span&gt;
+                </pre>
+            </x-section>
+        </x-section>
+            
+        <x-section class="mx-10 my-5">
+            <div class="w-40 h-3 mb-5">
+                <h2 class="font-bold underline">Preview</h2>
+            </div>
+            <x-badge>Default</x-badge>
+            <x-badge type="secondary">Secondary</x-badge>
+            <x-badge type="success">Success</x-badge>
+            <x-badge type="warning">Warning</x-badge>
+            <x-badge type="danger">Danger</x-badge>
+
+            <div class="w-3 h-3">
+                <h2 class="font-bold underline">Code</h2>
+            </div>
+            <x-section class="flex bg-ics-primary-200 text-white">
+                <pre class="copy-text">
+&lt;x-badge&gt;Default&lt;/x-badge&gt;
+&lt;x-badge type="secondary"&gt;Secondary&lt;/x-badge&gt;
+&lt;x-badge type="success"&gt;Success&lt;/x-badge&gt;
+&lt;x-badge type="warning"&gt;Warning&lt;/x-badge&gt;
+&lt;x-badge type="danger"&gt;Danger&lt;/x-badge&gt;
+                </pre>
+            </x-section>
+            <button onclick="copyText(this)" class="text-sm text-blue-500 hover:font-bold">📋Copia</button>
+        </x-section>
+    
+    </div>
+    
+    
+    
+    
+    
+    
     <script>
         tailwind.config = {
             theme: {
@@ -498,10 +639,20 @@
                             secondary: {
                                 100: "#E6F0F6",
                                 200: "#CFEAF7",
+                                300: "#A3D7F0",
                             },
-                            success: "#1A7F1E",
-                            warning: "#F7AD19",
-                            danger: "#BF1613",
+                            success: {
+                                100: "#1A7F1E",
+                                200: "#135D16",
+                            },
+                            warning:{
+                                100: "#F7AD19",
+                                200: "#CC8800",
+                            },
+                            danger: {
+                                100: "#BF1613",
+                                200: "#980906",
+                            },
                             gray: {
                                 100: "#F1F2F8",
                                 200: "#DCDEE7",
@@ -520,17 +671,32 @@
             .btn-primary-100 {
                 @apply bg-ics-primary-100 text-white;
             }
+            .btn-primary-200 {
+                @apply bg-ics-primary-200 text-white;
+            }
             .btn-secondary-200 {
                 @apply bg-ics-secondary-200 text-ics-primary-100;
             }
-            .btn-success {
-                @apply bg-ics-success text-white;
+            .btn-secondary-300 {
+                @apply bg-ics-secondary-300 text-ics-primary-100;
             }
-            .btn-warning {
-                @apply bg-ics-warning text-white;
+            .btn-success-100 {
+                @apply bg-ics-success-100 text-white;
             }
-            .btn-danger {
-                @apply bg-ics-danger text-white;
+            .btn-success-200 {
+                @apply bg-ics-success-200 text-white;
+            }
+            .btn-warning-100 {
+                @apply bg-ics-warning-100 text-white;
+            }
+            .btn-warning-200 {
+                @apply bg-ics-warning-200 text-white;
+            }
+            .btn-danger-100 {
+                @apply bg-ics-danger-100 text-white;
+            }
+            .btn-danger-200 {
+                @apply bg-ics-danger-200 text-white;
             }
             .btn-out {
                 @apply border border-2;
@@ -539,13 +705,13 @@
                 @apply border-ics-primary-100 text-ics-primary-100;
             }
             .btn-out-success {
-                @apply border-ics-success text-ics-success
+                @apply border-ics-success-100 text-ics-success-100
             }
             .btn-out-warning {
-                @apply border-ics-warning text-ics-warning
+                @apply border-ics-warning-100 text-ics-warning-100
             }
             .btn-out-danger {
-                @apply border-ics-danger text-ics-danger
+                @apply border-ics-danger-100 text-ics-danger-100
             }
         }
 

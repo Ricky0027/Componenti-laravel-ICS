@@ -32,6 +32,6 @@
     </select>
 
     @error($name)
-        <p class="text-sm text-ics-danger mt-1">{{ $message }}</p>
+        <p class="text-sm text-ics-danger-100 mt-1">{{ $message }}</p>
     @enderror
 </div>
