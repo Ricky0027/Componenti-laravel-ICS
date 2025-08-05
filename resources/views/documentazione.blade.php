@@ -619,7 +619,24 @@ hover:bg-ics-primary-200"&gt;Apri modale&lt;/x-button&gt;
     
     </div>
     
-    
+    <div>
+        <div class="w-full h-20 flex justify-center items-center">
+            <h2 class="text-2xl font-semibold">Accordion</h2>
+        </div>
+        <x-section class="mx-10">
+            <div class="w-40 h-3 mb-5">
+                <h2 class="font-bold underline">Preview</h2>
+            </div>
+            <x-accordion title="Accordion 1" :open="true">
+                <p>Contenuto Accordion 1</p>
+            </x-accordion>
+            
+            <x-accordion title="Accordion 2">
+                <p>Contenuto Accordion 2</p>
+            </x-accordion>
+        </x-section>
+ 
+    </div>
     
     
     
