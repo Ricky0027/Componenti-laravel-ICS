@@ -26,7 +26,7 @@
 
     <div>
         <div class="w-full h-20 flex justify-center items-center">
-            <h2 class="text-2xl">🎨 Palette colori ICS</h2>
+            <h2 class="text-2xl font-semibold">🎨 Palette colori ICS</h2>
         </div>
         {{-- <ul class="w-full grid sm:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
             @foreach ($colori as $categoria => $gruppo)
@@ -82,11 +82,11 @@
                             <p class="font-bold">{{ $colore['name'] }}</p>
                             <div class="flex flex-rows justify-between">
                                 <p class="font-light">RGB: <span class="copy-color">{{ $colore['RGB'] }}</span></p>
-                                <button onclick="copyColor(this)" class="text-xs rounded-lg bg-ics-primary-100 w-10 h-5 text-white"><i class="fa-solid fa-copy"></i></button>
+                                <button onclick="copyColor(this)" class="text-xs rounded-lg bg-ics-primary-100 w-10 h-5 text-white" title="copia"><i class="fa-solid fa-copy"></i></button>
                             </div>
                             <div class="flex flex-rows justify-between">
                                 <p class="font-light">hex: <span class="copy-color">{{ $colore['hex'] }}</span></p>
-                                <button onclick="copyColor(this)" class="text-xs rounded-lg bg-ics-primary-100 w-10 h-5 text-white mt-1 "><i class="fa-solid fa-copy"></i></button>
+                                <button onclick="copyColor(this)" class="text-xs rounded-lg bg-ics-primary-100 w-10 h-5 text-white mt-1" title="copia"><i class="fa-solid fa-copy"></i></button>
                             </div>
                         </div>
 
@@ -111,7 +111,7 @@
     </div>
     <div>
         <div class="w-full h-20 flex justify-center items-center">
-            <h2 class="text-2xl">Pulsanti</h2>
+            <h2 class="text-2xl font-semibold">Pulsanti</h2>
         </div>
         <x-section class="flex flex-cols mx-10">
             <div class="w-3 h-3">
@@ -149,7 +149,7 @@
         </x-section>
 
         <div class="w-full h-20 flex justify-center items-center">
-            <h2 class="text-2xl">Pulsanti Outline</h2>
+            <h2 class="text-2xl font-semibold">Pulsanti Outline</h2>
         </div>
         <x-section class="grid-rows-4 mx-10 my-5">
             <h2 class="font-bold underline">Preview</h2>
@@ -173,7 +173,7 @@
         </x-section>
 
         <div class="w-full h-20 flex justify-center items-center">
-            <h2 class="text-2xl">Pulsanti con icone</h2>
+            <h2 class="text-2xl font-semibold">Pulsanti con icone</h2>
         </div>
 
         <x-section class="grid-rows-3 mx-10 my-5">
@@ -196,7 +196,7 @@
 
     <div>
         <div class="w-full h-20 flex justify-center items-center">
-            <h2 class="text-2xl">Form</h2>
+            <h2 class="text-2xl font-semibold">Form</h2>
         </div>
         <x-section class="mx-10">
             <div class="w-40 h-3 mb-5">
@@ -283,11 +283,10 @@
                 <x-input label="Number" name="number" type="number" placeholder="Inserisci un numero" />
                 <x-input label="Date" name="date" type="date" />
                 <x-input label="File" name="File" type="file" />
-                <x-checkbox name="checkbox" :checked="true" />
+                <x-checkbox id="accetto" name="checkbox"/>
                 <x-toggle name="toggle" :checked="false" />
                 <div class="w-1/2 flex flex-cols">
-                    <x-radio-button name="radio" :checked="true" />
-                    <x-radio-button name="radio" :checked="false" />
+                    <x-radio-button name="radio" :options="['1' => 'Option 1', '2' => 'Option 2']" selected="1" label="radio"/>
                 </div>
                 <x-textarea name="textarea" label="Textarea" />
                 <x-select name="select" label="Select" :options="['Option 1', 'Option 2', 'Option 3']" />
@@ -303,11 +302,10 @@
     &lt;x-input label="Number" name="number" type="number" placeholder="Inserisci un numero"/&gt;
     &lt;x-input label="Date" name="date" type="date"/&gt;
     &lt;x-input label="File" name="file" type="file"/&gt;
-    &lt;x-checkbox name="checkbox" :checked="true"/&gt;
+    &lt;x-checkbox id="accetto" name="checkbox"/&gt;
     &lt;x-toggle name="toggle" :checked="false"/&gt;
     &lt;div class="w-1/2 flex flex-cols"&gt;
-        &lt;x-radio-button name="radio" :checked="true"/&gt;
-        &lt;x-radio-button name="radio" :checked="false"/&gt;
+        &lt;x-radio-button name="radio" :options="&#91;'1' => 'Option 1', '2' => 'Option 2'&#93;" selected="1" label="radio"/&gt;
     &lt;/div&gt;
     &lt;x-textarea name="textarea" label="Textarea"/&gt;
     &lt;x-select name="select" label="Select" :options="&#91;'Option 1', 'Option 2', 'Option3'&#93;"/&gt;
@@ -321,7 +319,7 @@
 
     <div>
         <div class="w-full h-20 flex justify-center items-center">
-            <h2 class="text-2xl">Modale</h2>
+            <h2 class="text-2xl font-semibold">Modale</h2>
         </div>
 
         <x-section class="mx-10 my-5">
@@ -407,7 +405,7 @@ hover:bg-ics-primary-200"&gt;Apri modale&lt;/x-button&gt;
 
     <div>
         <div class="w-full h-20 flex justify-center items-center">
-            <h2 class="text-2xl">Tabelle</h2>
+            <h2 class="text-2xl font-semibold">Tabelle</h2>
         </div>
 
         <x-section class="mx-10 my-5">
@@ -483,7 +481,7 @@ hover:bg-ics-primary-200"&gt;Apri modale&lt;/x-button&gt;
 
     <div>
         <div class="w-full h-20 flex justify-center items-center">
-            <h2 class="text-2xl">Tabs</h2>
+            <h2 class="text-2xl font-semibold">Tabs</h2>
         </div>
 
         <x-section class="mx-10 my-5">
@@ -527,13 +525,13 @@ hover:bg-ics-primary-200"&gt;Apri modale&lt;/x-button&gt;
                 <h2 class="font-bold underline">Preview</h2>
             </div>
             <x-tabs :tabs="['Tab 1' => 'tab1', 'Tab 2' => 'tab2', 'Tab 3' => 'tab3']" active="tab1">
-                <div x-show="activeTab === 'tab1'">
+                <div x-show="activeTab === 'tab1'" class="p-4">
                     Contenuto della prima tab.
                 </div>
-                <div x-show="activeTab === 'tab2'" x-cloak>
+                <div x-show="activeTab === 'tab2'" class="p-4" x-cloak>
                     Contenuto della seconda tab.
                 </div>
-                <div x-show="activeTab === 'tab3'" x-cloak>
+                <div x-show="activeTab === 'tab3'" class="p-4" x-cloak>
                     Contenuto della terza tab.
                 </div>
             </x-tabs>
@@ -562,7 +560,7 @@ hover:bg-ics-primary-200"&gt;Apri modale&lt;/x-button&gt;
                 
     <div>
         <div class="w-full h-20 flex justify-center items-center">
-            <h2 class="text-2xl">Badge</h2>
+            <h2 class="text-2xl font-semibold">Badge</h2>
         </div>
         <x-section class="mx-10">
             <div class="w-40 h-3 mb-5">

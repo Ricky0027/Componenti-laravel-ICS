@@ -20,7 +20,7 @@
                     <h2 class="text-xl font-bold text-ics-primary-100">{{ $title }}</h2>
                     <h3 class="text-sm font-medium text-ics-primary-100 mt-1">{{ $subtitle }}</h3>
                 </div>
-                <button @click="open = false" class="text-md btn-out w-8 h-8 btn-out-primary rounded-full hover:btn-primary-100">&times;</button>
+                <button @click="open = false" class="text-2xl text-ics-primary-100 hover:text-ics-primary-200">&times;</button>
             </div>
         </div>
 

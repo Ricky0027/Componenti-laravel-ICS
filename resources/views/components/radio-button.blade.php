@@ -1,43 +1,37 @@
-@props([
-    'name',
-    'id' => null,
-    'label' => '',
-    'value' => '1',
-    'checked' => false,
-])
+<div {{ $attributes->merge(['class' => 'flex flex-col gap-2']) }}>
+        <p>{{ $label }}:</p>
+        <div {{ $attributes->class([
+            'flex',
+            'flex-col gap-2' => $layout === 'vertical',
+            'flex-row gap-4' => $layout === 'horizontal',
+        ]) }}>
+            @foreach ($options ?? [] as $value => $label)
+                @php
+                    $id = "{$name}_{$value}";
+                @endphp
 
-@php
-    $radioId = $id ?? $name . '-' . Str::slug($value);
-    $isChecked = old($name, $checked) == $value ? 'checked' : '';
-@endphp
-
-<div class="flex items-center space-x-2">
-    <input
-        type="radio"
-        name="{{ $name }}"
-        id="{{ $radioId }}"
-        value="{{ $value }}"
-        {{ $isChecked }}
-        class="sr-only peer"
-        {{ $attributes }}
-    />
-    
-    <label for="{{ $radioId }}" class="w-10 h-10 rounded-full bg-ics-gray-200 flex items-center justify-center cursor-pointer transition">
-        @if ($isChecked)
-            <i class="fa-solid fa-circle text-4xl text-ics-primary-100"></i>
-        @endif
-    </label>
-        
-
-    
-    @if($label)
-        <label for="{{ $radioId }}" class="text-sm text-ics-primary-100 select-none">
-            {{ $label }}
-        </label>
-    @endif
+                {{-- <div class="flex items-center gap-2"> --}}
+                <div {{ $attributes->class([
+                    'flex items-center gap-2',
+                    'cursor-pointer' => $disabled != $value,
+                    'opacity-60 cursor-default' => $disabled == $value,
+                ]) }}>
+                    <input
+                            type="radio"
+                            name="{{ $name }}"
+                            id="{{ $id }}"
+                            value="{{ $value }}"
+                            class="w-6 h-6 border border-ics-gray-200 bg-ics-gray-200 bg-cover text-ics-primary-100 focus:ring-0 focus:ring-offset-0"
+                            @checked($selected == $value)
+                            @disabled($disabled == $value)
+                    >
+                    <label class="block mb-0" for="{{ $id }}">
+                        {{ $label }}
+                    </label>
+                </div>
+            @endforeach
+        </div>
 </div>
 
-@error($name)
-    <p class="form-error-text">{{ $message }}</p>
-@enderror
+
 

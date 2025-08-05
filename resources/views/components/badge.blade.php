@@ -4,7 +4,7 @@
 ])
 
 @php
-    $base = 'inline-block text-md font-semibold px-2 py-1';
+    $base = 'inline-block text-xs font-semibold px-2 py-1';
     $colors = [
         'primary' => 'bg-ics-primary-100 text-white',
         'secondary' => 'bg-ics-secondary-200 text-ics-primary-100',

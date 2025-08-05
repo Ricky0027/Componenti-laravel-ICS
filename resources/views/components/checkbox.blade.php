@@ -1,40 +1,42 @@
-@props([
-    'name',
-    'id' => null,
-    'label' => '',
-    'value' => '1',
-    'checked' => false,
-])
+
 
 @php
-    $checkboxId = $id ?? $name;
-    $isChecked = old($name, $checked) ? 'checked' : '';
+    $hasError = $errors->has($name);
 @endphp
 
-<div class="flex items-center gap-x-2">
-    <input
-        type="checkbox"
-        name="{{ $name }}"
-        id="{{ $checkboxId }}"
-        value="{{ $value }}"
-        {{ $isChecked }}
-        class="sr-only peer"
-        {{ $attributes }}
-    />
+<div {{ $attributes->merge(['class' => '']) }}>
+    
+    <label for="{{ $id }}" {{ 
+        $attributes->class([
+            'flex items-center gap-2',
+            'cursor-pointer' => !$disabled,
+            'opacity-60 cursor-default' => $disabled,
+        ]) 
+    }}>
+        <input
+            type="checkbox"
+            id="{{ $id }}"
+            name="{{ $name }}"
+            value="{{ $value }}"
+            @checked($checked)
+            class="hidden peer"
+            @if($disabled) disabled @endif
+        />
+        
+        <!-- Stato non selezionato -->
+        <div class="w-6 h-6 border border-ics-gray-200 rounded-md bg-ics-gray-200 peer-checked:hidden"></div>
 
-    <label for="{{ $checkboxId }}" class="w-12 h-12 rounded-md bg-ics-gray-200 flex items-center justify-center peer-checked:bg-ics-gray-200 cursor-pointer transition-colors">
-        @if ($isChecked)
-            <i class="fa-solid fa-check text-4xl text-ics-primary-100"></i>    
-        @endif
+        <!-- Stato selezionato -->
+        <div class="w-6 h-6 hidden items-center justify-center border border-ics-gray-200 rounded-md bg-ics-gray-200 peer-checked:flex">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <span>{{ $label }}</span>
     </label>
 
-    @if($label)
-        <label for="{{ $checkboxId }}" class="text-sm text-ics-primary-100 select-none">
-            {{ $label }}
-        </label>
+    @if ($hasError)
+        <p class="mt-1 text-sm text-red-600">
+            {{ $errors->first($name) }}
+        </p>
     @endif
 </div>
-
-@error($name)
-    <p class="form-error-text">{{ $message }}</p>
-@enderror

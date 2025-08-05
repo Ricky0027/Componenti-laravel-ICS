@@ -20,7 +20,7 @@
     </div>
 
     <!-- Tab Content -->
-    <div class="mt-4">
+    <div class="pt-2 bg-white">
         {{ $slot }}
     </div>
 </div>
