@@ -13,7 +13,7 @@
             @endforeach
         </tr>
     </thead>
-    <tbody class="text-sm font-regular text-ics-primary-100">
+    <tbody class="text-sm font-light text-ics-primary-100">
         {{ $slot }}
     </tbody>
 </table>

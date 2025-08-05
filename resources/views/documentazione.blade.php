@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body class="font-inter">
     <x-page-title>
         <h1 class="text-center text-4xl text-ics-primary-100 font-bold">Documentazione</h1>
     </x-page-title>
@@ -266,7 +266,7 @@
             id="&#123;&#123; $inputId &#125;&#125;"
             value="&#123;&#123; old&#40;$name, $value&#41; &#125;&#125;"
             &#123;&#123; $attributes->merge&#40;&#91;'class' => 'w-full border border-gray-300 rounded p-2'&#93;&#41; &#125;&#125;
-            /&gt;
+    /&gt;
     &#64;endif
     &#64;error&#40;$name&#41;
             &lt;p class="text-sm text-ics-danger-100 mt-1"&gt;&#123;&#123; $message &#125;&#125;&lt;/p&gt;
@@ -430,7 +430,7 @@ hover:bg-ics-primary-200"&gt;Apri modale&lt;/x-button&gt;
             &#64;endforeach
         &lt;/tr&gt;
         &lt;/thead&gt;
-        &lt;tbody class="text-sm font-regular text-ics-primary-100"&gt;
+        &lt;tbody class="text-sm font-light text-ics-primary-100"&gt;
             &#123;&#123; $slot &#125;&#125;
         &lt;/tbody&gt;
 &lt;/table&gt;
@@ -628,6 +628,9 @@ hover:bg-ics-primary-200"&gt;Apri modale&lt;/x-button&gt;
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
                     colors: {
                         ics: {
                             primary: {
